@@ -4,3 +4,285 @@
 *:after {
   box-sizing: border-box;
 }
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+#main-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.hero picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-features {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.hero-features h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #41a1ce; /* Blue text for DMC Delorean */
+}
+
+.hero-features p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #63b6dc; /* Blue text for features */
+}
+
+button {
+  background-color: #8ecae6;
+  color: black; /* Black text for Own Today */
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #8ecae6; /* Blue background on hover */
+  color: white; /* White text on hover */
+}
+
+/* Grid Layout for Reviews and Upgrades */
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.reviews > div {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.reviews h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.reviews ul {
+  list-style: none;
+  padding: 0;
+}
+
+.reviews ul li {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Upgrades Section */
+.upgrades {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.upgrades h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.upgrades-flex__one,
+.upgrades-flex__two {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.upgrades-flex__one div,
+.upgrades-flex__two div {
+  text-align: center;
+  width: 48%;
+}
+
+.upgrades-flex__one img,
+.upgrades-flex__two img {
+  max-width: 100%;
+  height: auto;
+}
+
+.upgrades-flex__one p,
+.upgrades-flex__two p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Style for the site name (CSE Motors) */
+.siteName {
+  font-size: 24px; /* Adjust font size */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Style for the tools section (My Account) */
+#tools {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between
+}
+
+/* Add a light blue border (#8ecae6) and a glowing effect to all images inside the Delorean Upgrades section */
+.upgrades img {
+  border: 4px solid #8ecae6; /* Use the specified color */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  padding: 4px; /* Optional: Add space between the image and the border */
+  box-shadow: 0 0 10px 5px #8ecae6; /* Add a glowing effect */
+}
+
+
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+  /* Adjust the header layout for mobile */
+  #top-header {
+      flex-direction: column; /* Stack header items vertically */
+      align-items: flex-start; /* Align items to the left */
+      padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  /* Adjust the site name and tools for mobile */
+  .siteName {
+      font-size: 20px; /* Reduce font size for mobile */
+      margin-bottom: 10px; /* Add space below the site name */
+  }
+
+  #tools {
+      font-size: 14px; /* Reduce font size for mobile */
+  }
+
+  /* Adjust the hero section for mobile */
+  .hero {
+      flex-direction: column; /* Stack hero content vertically */
+      text-align: center; /* Center-align text */
+  }
+
+  .hero img {
+      width: 100%; /* Make the image responsive */
+      height: auto; /* Maintain aspect ratio */
+  }
+
+  .hero-features {
+      margin-top: 10px; /* Add space above the features */
+  }
+
+  /* Adjust the upgrades section for mobile */
+  .upgrades {
+      padding: 10px; /* Add padding for better spacing */
+  }
+
+  .upgrades h3 {
+      font-size: 18px; /* Reduce font size for mobile */
+      text-align: center; /* Center-align the heading */
+  }
+
+  .upgrades-flex__one,
+  .upgrades-flex__two {
+      flex-direction: column; /* Stack upgrade items vertically */
+      gap: 20px; /* Add space between items */
+  }
+
+  .upgrades img {
+      width: 100%; /* Make images responsive */
+      height: auto; /* Maintain aspect ratio */
+      border: 3px solid #8ecae6; /* Slightly thinner border for mobile */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 0 8px 4px #8ecae6; /* Slightly smaller glow for mobile */
+  }
+
+  .upgrades p {
+      text-align: center; /* Center-align the text below images */
+      font-size: 14px; /* Reduce font size for mobile */
+  }
+
+  /* Adjust the reviews section for mobile */
+  .reviews {
+      padding: 10px; /* Add padding for better spacing */
+  }
+
+  .reviews h3 {
+      font-size: 18px; /* Reduce font size for mobile */
+      text-align: center; /* Center-align the heading */
+  }
+
+  .reviews ul {
+      padding-left: 20px; /* Add padding to the list */
+  }
+
+  .reviews li {
+      font-size: 14px; /* Reduce font size for mobile */
+  }
+}

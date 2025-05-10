@@ -41,3 +41,11 @@ const host = process.env.HOST
 app.listen(port, () => {
   console.log(`app listening on ${host}:${port}`)
 })
+
+
+app.get("/", (req, res) => {
+  res.render("your-view", {
+    title: "Your Page Title",
+    nav: "Your navigation content" // Add this line
+  });
+});
