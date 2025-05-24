@@ -286,3 +286,26 @@ footer p {
       font-size: 14px; /* Reduce font size for mobile */
   }
 }
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.detail-image img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-info .price {
+  font-size: 1.5rem;
+  color: #d2232a;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
